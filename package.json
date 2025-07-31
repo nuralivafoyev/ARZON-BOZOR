@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "swiper": "^11.2.10"
+  },
+    "name": "my-package",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest"
+  }
+}
