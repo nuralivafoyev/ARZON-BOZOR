@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Google Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- style -->
+  <link rel="stylesheet" href="./style.css">
+  <title>Support Modal</title>
+
+</head>
+
+<body>
+<!-- Chat Toggle Button -->
+<button id="chatToggle" title="Support Chat">
+  <span class="material-icons">chat</span>
+</button>
+
+<!-- Chat Box -->
+<div id="chatBox">
+  <div class="chat-header">
+    🧑‍💻 Support Chat
+  </div>
+  
+  <div class="chat-body" id="chatBody">
+    <div class="bot-message">
+      Salom! Yordam kerak bo‘lsa, shu yerda yozib qoldiring.
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="userName" placeholder="Ismingiz">
+    <textarea id="userMessage" rows="2" placeholder="Xabaringizni yozing..."></textarea>
+    <button id="sendMessage">Yuborish</button>
+  </div>
+</div>
+
+
+<!-- script -->
+<script src="./app.js">
+</script>
+
+</body>
+
+</body>
+</html>

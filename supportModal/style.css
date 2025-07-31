@@ -1,0 +1,154 @@
+/* Chat Toggle Button */
+#chatToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+#chatToggle:hover {
+  background-color: #0056b3;
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* Chat Box */
+#chatBox {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 340px;
+  max-height: 500px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 999;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Chat Header */
+.chat-header {
+  background-color: #007bff;
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Chat Body */
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  font-size: 14px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f6f6f6;
+}
+
+/* Bot message (chap tomonda) */
+.bot-message {
+  max-width: 80%;
+  align-self: flex-start;
+  background-color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 15px 15px 15px 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+}
+
+/* User message (o‘ng tomonda) */
+.user-message-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.user-message {
+  max-width: 75%;
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  padding: 10px 14px;
+  border-radius: 15px 15px 0 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.4;
+}
+
+/* Avatar */
+.avatar {
+  width: 28px;
+  height: 28px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Chat Input Area */
+.chat-input {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.chat-input input,
+.chat-input textarea {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
+}
+
+.chat-input button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+  background-color: #218838;
+}
+
+/* Responsivlik uchun */
+@media (max-width: 400px) {
+  #chatBox {
+    width: 90%;
+    right: 5%;
+  }
+}

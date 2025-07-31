@@ -1,0 +1,262 @@
+.menu-toggle {
+  width: 30px;
+  height: 22px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--main-light-red);
+  border-radius: 2px;
+  transition: all 0.4s ease-in-out;
+  transform-origin: center;
+}
+
+/* X ko‘rinishi */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+/* Mobil responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .container {
+        max-width: 768px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        z-index: 99;
+        padding: 0 0 20px 0;
+        border-bottom: 2px solid var(--main-light-red);
+        
+        /* ✅ animatsiya uchun boshlang‘ich holat */
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        display: flex; /* bu JS orqali keladi */
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .switch {
+        display: none;
+    }
+}
+
+
+
+
+/* Asosiy bo'limga joy ochish */
+.asosiy {
+    padding-top: 160px;
+}
+
+/* Swiper konteyner */
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Har bir slayd */
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 60%;
+    height: auto;
+    /* o'zgartirildi */
+}
+
+/* Slayd ichidagi rasm */
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+/* === Responsive styling === */
+@media (max-width: 768px) {
+    .swiper-slide {
+        width: 80%;
+        /* kichik ekranlarda kengroq qilish */
+    }
+
+    .swiper-slide img {
+        height: 440px;
+        /* rasm balandligini kichraytirish */
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-slide {
+        width: 90%;
+    }
+
+    .swiper-slide img {
+        max-height: 200px;
+    }
+}
+
+
+/* ============ RESPONSIVE: 1024px gacha ============ */
+@media (max-width: 1024px) {
+    .card_wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+
+    .yangitovarlar_title h1,
+    .skidka h1,
+    .manzil_title h1 {
+        font-size: 32px;
+    }
+
+    .yangitovarlar .card_wrapper .card,
+    .skidka .card_wrapper .card {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .product_name {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .manzil_text {
+        flex-direction: column;
+        font-size: 18px;
+        gap: 30px;
+    }
+
+    .manzil_text span {
+        width: 100%;
+    }
+
+    .manzil_text span h1 {
+        font-size: 36px;
+    }
+}
+
+/* ============ RESPONSIVE: 768px gacha ============ */
+@media (max-width: 768px) {
+    .card_wrapper {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+
+    }
+
+    .yangitovarlar .card_wrapper .card,
+    .skidka .card_wrapper .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .yangitovarlar .card_wrapper .card img,
+    .skidka .card_wrapper .card img {
+        height: 140px;
+    }
+
+    .product_name {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .manzil_wrapper {
+        padding: 20px;
+    }
+
+    .manzil_text {
+        font-size: 16px;
+        padding-top: 30px;
+    }
+
+    .manzil_text span h1 {
+        font-size: 28px;
+    }
+}
+
+/* ============ RESPONSIVE: 480px gacha (smartfonlar) ============ */
+@media (max-width: 480px) {
+    .card_wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .yangitovarlar_title h1,
+    .skidka h1,
+    .manzil_title h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .yangitovarlar .card_wrapper .card,
+    .skidka .card_wrapper .card {
+        height: 500px;
+        max-width: 100%;
+
+    }
+
+    .yangitovarlar .card_wrapper .card img,
+    .skidka .card_wrapper .card img {
+        height: 350px;
+    }
+
+    .product_name {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .price {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .manzil_text {
+        font-size: 15px;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .manzil_text span h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+}

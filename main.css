@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    /* transition: all 0.3s ease; */
+}
+
+/* extentions */
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 1440px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* extentions */
+
+
+/* variables */
+:root {
+    --main-light-white: #ffffff;
+    --main-light-white01: #F5F5F5;
+    --main-light-white05: #ffffff81;
+    --main-light-red: #ed2843;
+    --main-light-blue: #008ECC;
+    --main-light-green: #249B3E;
+    --main-light-black: #222222;
+    --main-light-black05: #92929240;
+}
+
+/* variables */
+
+/* checkbox switch */
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-light-red);
+    -webkit-transition: .4s;
+    transition: .4s;
+    opacity: 0.5;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--main-light-white);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--main-light-red);
+    box-shadow: 0 0 1px var(--main-light-red);
+    opacity: 1;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    opacity: 1;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* checkbox switch */
+
+/* support btn */
+.support_modal {
+    z-index: 9999;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+width: 300px;   
+height: 540px;
+    overflow: visible;
+}
